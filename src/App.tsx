@@ -74,6 +74,8 @@ function App() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSuccess(''); // Reset success message on new submission attempt
+
     try {
       console.log("Sending contact form:", formData);
 
@@ -1011,7 +1013,27 @@ function App() {
                 </span>
               </button>
 
-              {success && <p className="text-green-600 text-sm mt-2">{success}</p>}
+              {success && (
+                <div className="flex items-center justify-between p-4 mt-4 rounded-lg bg-gradient-to-r from-green-400 to-emerald-500 text-white shadow-lg animate-fadeIn transition-all duration-300">
+                  <div className="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="font-medium">{success}</span>
+                  </div>
+                  <button
+                    className="text-white hover:text-gray-200 text-xl font-bold"
+                    onClick={() => setSuccess('')}
+                  >
+                    ×
+                  </button>
+                </div>
+              )}
+
             </form>
 
           </div>
