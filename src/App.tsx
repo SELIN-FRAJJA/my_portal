@@ -165,13 +165,13 @@ function App() {
   {
     title: "National Institute of Technology Trichy Internship",
     issuer: "Internship",
-    date: "2024",
-    images: ["/certificates/nit.png"],
+    date: "Nov, 2024 - Jan, 2025 & May, 2025 - June, 2025",
+    images: ["/certificates/nit.png", "/certificates/nit2.png"],
   },  
   {
     title: "Google AI-ML Virtual Internship",
     issuer: "AICTE Eduskill",
-    date: "2024",
+    date: "2024, 2025",
     images: [
       "/certificates/aicte1.png",
       "/certificates/aicte2.png"
@@ -180,31 +180,31 @@ function App() {
   {
     title: "MongoDB Basics for Students",
     issuer: "MongoDB University",
-    date: "2024",
+    date: "2025",
     images: ["/certificates/mongo.png"],
   },
   {
     title: "Parallel Computer Architecture",
     issuer: "NPTEL",
-    date: "2024",
+    date: "2025",
     images: ["/certificates/nptel.png"],
   },
   {
     title: "Algorithm on graphs and strings",
     issuer: "Coursera",
-    date: "2024",
+    date: "2023",
     images: ["/certificates/coursera1.jpeg", "/certificates/coursera2.jpeg"],
   },
   {
     title: "CyberSecurity Courses",
     issuer: "Cisco",
-    date: "2024",
+    date: "2023",
     images: ["/certificates/cisco1.png", "/certificates/cisco2.png", "/certificates/cisco3.png"],
   },
   {
     title: "Skillathon",
     issuer: "UiPath Acedemic",
-    date: "2024",
+    date: "2023",
     images: ["/certificates/skillathon.png"],
   },
 ];
