@@ -724,7 +724,7 @@ function App() {
                         </div>
                         <div>
                           <p className="text-gray-600 text-sm">Badges Earned</p>
-                          <p className="text-lg font-bold text-gray-900">15</p>
+                          <p className="text-lg font-bold text-gray-900">17</p>
                         </div>
                       </div>
 
@@ -737,7 +737,7 @@ function App() {
                         </div>
                         <div>
                           <p className="text-gray-600 text-sm">Problem-Solving Streak</p>
-                          <p className="text-lg font-bold text-gray-900">320+ days</p>
+                          <p className="text-lg font-bold text-gray-900">335+ days</p>
                         </div>
                       </div>
 
@@ -750,7 +750,7 @@ function App() {
                         </div>
                         <div>
                           <p className="text-gray-600 text-sm">Contest Rating</p>
-                          <p className="text-lg font-bold text-gray-900">1500+</p>
+                          <p className="text-lg font-bold text-gray-900">1650+</p>
                         </div>
                       </div>
                     </div>
