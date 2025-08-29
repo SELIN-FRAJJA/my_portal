@@ -432,7 +432,7 @@ function App() {
                   <div className="text-gray-600 mt-2">Projects Completed</div>
                 </div>
                 <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-blue-100 hover:scale-105 transform transition-all duration-300 hover:shadow-blue-500/10">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">8.6/10</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">8.7/10</div>
                   <div className="text-gray-600 mt-2">Current GPA</div>
                 </div>
               </div>
@@ -660,7 +660,7 @@ function App() {
                   <p className="text-emerald-600 font-medium mb-2">Chennai Institute of Technology</p>
                   <p className="text-gray-600 mb-4">2023 - 2027 (Expected)</p>
                   <p className="text-gray-700 mb-4">
-                    Currently in pre-final year with a GPA of 8.6/10. Relevant coursework includes 
+                    Currently in pre-final year with a GPA of 8.7/10. Relevant coursework includes 
                     Data Structures & Algorithms, Software Engineering, Database Systems, 
                     Web Development, and Computer Networks.
                   </p>
