@@ -1045,7 +1045,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-400">
-              © 2025 Selin Frajja. Built with React and Tailwind CSS.
+              © 2025 Selin Frajja. Powered by React ⚛️ + Tailwind CSS 🎨
             </p>
           </div>
         </div>
