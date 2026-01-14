@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'education', 'certification', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'achievements', 'education', 'certification', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -162,6 +162,34 @@ function App() {
     }
   ];
 
+  const achievements = [
+    {
+      title: "Special Prize Winner",
+      event: "TNWISE’25 Hackathon",
+      description: "Recognized for innovative problem-solving and real-world impact using AI-driven solutions.",
+      image: "/achievements/tnwise.png",
+    },
+    {
+      title: "Runner-Up",
+      event: "Electrothon’24",
+      description: "Secured second place for developing a machine learning solution for healthcare diagnostics.",
+      image: "/achievements/electrothon.png",
+    },
+    {
+      title: "Finalist",
+      event: "Smart Hack’24 (48-Hour Hackathon)",
+      description: "Finalist among hundreds of teams for building a scalable civic-tech platform.",
+      image: "/achievements/smarthack.png",
+    },
+    {
+      title: "Internship Offer",
+      event: "Techdivathon’25",
+      description: "Received an internship offer based on technical excellence and teamwork performance.",
+      image: "/achievements/techdivathon.png",
+    },
+  ];
+
+
   const groupedCertificates = [
 
   {
@@ -254,7 +282,7 @@ function App() {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Skills', 'Projects', 'Education', 'Certification', 'Contact'].map((item) => (
+              {['Home', 'About', 'Skills', 'Projects', 'Achievements', 'Education', 'Certification', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -432,7 +460,7 @@ function App() {
                   <div className="text-gray-600 mt-2">Projects Completed</div>
                 </div>
                 <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-blue-100 hover:scale-105 transform transition-all duration-300 hover:shadow-blue-500/10">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">8.6/10</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">8.7/10</div>
                   <div className="text-gray-600 mt-2">Current GPA</div>
                 </div>
               </div>
@@ -467,13 +495,13 @@ function App() {
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-1">
                 <li>
-                  ✨ Developed an <span className="hover:text-blue-600 transition-colors duration-200">Intern Portal</span> for NIT to streamline internship management.
+                   Developed an <span className="hover:text-blue-600 transition-colors duration-200">Intern Portal</span> for NIT to streamline internship management.
                 </li>
                 <li>
-                  🎥 Built an <span className="hover:text-red-600 transition-colors duration-200">AI-based Lip Syncing System</span> using deep learning and computer vision.
+                   Built an <span className="hover:text-red-600 transition-colors duration-200">AI-based Lip Syncing System</span> using deep learning and computer vision.
                 </li>
                 <li>
-                  💬 Created an <span className="hover:text-green-600 transition-colors duration-200">Interview Chatbot</span> powered by machine learning for smart candidate interaction.
+                   Created an <span className="hover:text-green-600 transition-colors duration-200">Interview Chatbot</span> powered by machine learning for smart candidate interaction.
                 </li>
               </ul>
 
@@ -489,11 +517,11 @@ function App() {
                 Interests
               </h3>
               <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>💡 Exploring innovative solutions in Artificial Intelligence and Machine Learning.</li>
-                <li>🌐 Building user-friendly web applications and robust system designs.</li>
-                <li>📱 Developing intuitive and engaging mobile apps.</li>
-                <li>🌍 Contributing to open-source projects and collaborating with the global developer community.</li>
-                <li>🚀 Staying updated with emerging technologies and participating in hackathons and tech meetups.</li>
+                <li> Exploring innovative solutions in Artificial Intelligence and Machine Learning.</li>
+                <li> Building user-friendly web applications and robust system designs.</li>
+                <li> Developing intuitive and engaging mobile apps.</li>
+                <li> Contributing to open-source projects and collaborating with the global developer community.</li>
+                <li> Staying updated with emerging technologies and participating in hackathons and tech meetups.</li>
               </ul>
             </div>
 
@@ -631,6 +659,72 @@ function App() {
         </div>
       </section>
 
+      {/* Achievements & Recognition – Horizontal Scroll */}
+      <section
+        id="achievements"
+        className="py-20 bg-gradient-to-br from-purple-50 to-pink-50 overflow-hidden"
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header */}
+          <div className={`text-center mb-14 ${isVisible.achievements ? 'animate-fadeInUp' : 'opacity-0'}`}>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Achievements & Recognition
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Continuous journey of innovation, recognition, and competitive excellence.
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mt-4"></div>
+          </div>
+
+          {/* Scrolling Container */}
+          <div className="relative w-full overflow-hidden">
+            <div className={`marquee gap-8 ${showModal ? 'animation-paused' : ''}`}>
+
+              {/* Duplicate list for seamless looping */}
+              {[...achievements, ...achievements].map((item, index) => (
+                <div
+                  key={index}
+                  onClick={() => openModal(item.image)}
+                  className="min-w-[300px] max-w-[300px] bg-white rounded-xl shadow-lg 
+                  border border-gray-100 overflow-hidden cursor-pointer
+                  hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                >
+                  {/* Image */}
+                  <div className="h-40 overflow-hidden relative">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition flex items-center justify-center">
+                      <span className="text-white text-sm font-medium">Click to View</span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-purple-600 font-medium mb-2">
+                      {item.event}
+                    </p>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Education Section */}
       <section id="education" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -660,7 +754,7 @@ function App() {
                   <p className="text-emerald-600 font-medium mb-2">Chennai Institute of Technology</p>
                   <p className="text-gray-600 mb-4">2023 - 2027 (Expected)</p>
                   <p className="text-gray-700 mb-4">
-                    Currently in pre-final year with a GPA of 8.6/10. Relevant coursework includes 
+                    Currently in pre-final year with a GPA of 8.7/10. Relevant coursework includes 
                     Data Structures & Algorithms, Software Engineering, Database Systems, 
                     Web Development, and Computer Networks.
                   </p>
@@ -711,7 +805,7 @@ function App() {
                         </div>
                         <div>
                           <p className="text-gray-600 text-sm">Problems Solved</p>
-                          <p className="text-lg font-bold text-gray-900">500+</p>
+                          <p className="text-lg font-bold text-gray-900">600+</p>
                         </div>
                       </div>
 
@@ -724,7 +818,7 @@ function App() {
                         </div>
                         <div>
                           <p className="text-gray-600 text-sm">Badges Earned</p>
-                          <p className="text-lg font-bold text-gray-900">17</p>
+                          <p className="text-lg font-bold text-gray-900">22</p>
                         </div>
                       </div>
 
@@ -737,7 +831,7 @@ function App() {
                         </div>
                         <div>
                           <p className="text-gray-600 text-sm">Problem-Solving Streak</p>
-                          <p className="text-lg font-bold text-gray-900">335+ days</p>
+                          <p className="text-lg font-bold text-gray-900">450+ days</p>
                         </div>
                       </div>
 
